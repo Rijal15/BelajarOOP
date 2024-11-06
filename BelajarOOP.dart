@@ -1,9 +1,16 @@
+import 'dart:io';
 class Siswa { // class
 	String nama; // property
 	int kelas;
 	List<String> keahlian;
 	int tinggi;
 	Siswa(this.nama, this.kelas, this.keahlian, this.tinggi); // constructor
+  void registerEskulMewarnai() {
+    stdout.write("${"telah memasukan informasi " + nama + ", " + kelas.toString() + " dan " + tinggi.toString()} ke list eskul mewarnai");
+  }
+  void registerEskulMembaca() {
+    stdout.write("${"telah memasukan informasi " + nama + ", " + kelas.toString() + " dan " + tinggi.toString()} ke list eskul membaca");
+  }
 }
 void main() {
 	var siswa_1 = Siswa( // objek
@@ -14,6 +21,7 @@ void main() {
 		],
 		164
 	);
+  siswa_1.registerEskulMembaca();
 	var siswa_2 = Siswa(
 		"A. Zuin",
 		12,
